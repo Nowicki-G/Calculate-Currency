@@ -1,0 +1,49 @@
+.form__lebelText {
+    width: 150px;
+    display: inline-block;
+    margin: 5px;
+}
+
+.form__currency {
+    color: white;
+    background-color: hsl(0, 59%, 40%);
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+}
+.form__legend {
+    border-radius: 5px;
+    border: none;
+    background-color: hsl(0, 59%, 40%);
+    color: hsl(0, 0%, 100%);
+    padding: 10px;
+}
+.form__field:hover {
+    background-color: hsl(0, 59%, 50%);
+}
+
+.form__field--select {
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.form__fieldset {
+    background-color: hsl(33, 100%, 75%);
+    border-radius: 5px;
+}
+
+.form__button {
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    background-color: hsl(0, 59%, 40%);
+    color: white;
+    padding: 10px;
+}
+.form__button:hover {
+    background-color: hsl(0, 59%, 50%);
+}
+.form__button:active {
+    background-color: hsl(0, 59%, 55%);
+}
