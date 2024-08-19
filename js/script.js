@@ -1,30 +1,45 @@
-let formElement = document.querySelector('.js-form')
-let amountElement = document.querySelector('.js-amount')
-let currencyElement = document.querySelector('.js-currency')
-let resultElement = document.querySelector('.js-result')
+{
+	const welcome = () => {
+		console.log(" Witam wszystkich, którzy tu zaglądają 👍 !!!")
+	};
+	const onresultElementClick = () => {
+		resultElement.innerHTML = `${amount.toFixed(2)}, Pln = ${result.toFixed(2)}, ${currency}`
+	};
 
-formElement.addEventListener("submit", (event) => {
-	event.preventDefault()
+	welcome();
 
-	let exchangeRateEUR = 4.2903
-	let exchangeRateUSD = 3.9672
-	let exchangeRateGBP = 5.0525
+	
+		const formElement = document.querySelector('.js-form')
+		const amountElement = document.querySelector('.js-amount')
+		const currencyElement = document.querySelector('.js-currency')
+		const resultElement = document.querySelector('.js-result')
 
-	let amount = +amountElement.value
-	let currency = currencyElement.value
+		formElement.addEventListener("submit", (event) => {
+			event.preventDefault()
 
-	switch (currency) {
-		case '€':
-			result = amount / exchangeRateEUR
-			break
+			const exchangeRateEUR = 4.2903
+			const exchangeRateUSD = 3.9672
+			const exchangeRateGBP = 5.0525
 
-		case '$':
-			result = amount / exchangeRateUSD
-			break
-		case '£':
-			result = amount / exchangeRateGBP
-			break
-	}
+			const amount = +amountElement.value
+			const currency = currencyElement.value
 
-	resultElement.innerHTML = `${amount.toFixed(2)}, Pln = ${result.toFixed(2)}, ${currency}`
-});
+			switch (currency) {
+				case '€':
+					result = amount / exchangeRateEUR
+					break
+
+				case '$':
+					result = amount / exchangeRateUSD
+					break
+				case '£':
+					result = amount / exchangeRateGBP
+					break
+			}
+
+			resultElement.innerHTML = `${amount.toFixed(2)}, Pln = ${result.toFixed(2)}, ${currency}`
+			
+		});
+		
+
+};
